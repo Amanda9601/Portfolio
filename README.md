@@ -14,3 +14,18 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+
+Notes:
+Issues faced
+- tailwindcss version,
+    - i updated to version 4 while the teaching was in ver3 
+    - at first i just continued with ver4 and realized quite alot
+    of work have to be redone because it was all in ver3
+    - had to downgrade tailwindcss to ver3 and shows error about peer dependency conflicts (This project is using React 19, but some of my packages only support up to React 18)
+        - solution done: use --legacy-peer-deps
+        - tells npm to ignore peer dependency conflicts
+- had to manually create the tailwind and postcss config.cjs file
+

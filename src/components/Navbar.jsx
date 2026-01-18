@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
-import {styles} from '../styles'
-import { navLinks } from '../constants'
-import {logo, menu, close } from '../assets'
+import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import {styles} from '../styles';
+import { navLinks } from '../constants';
+import {logo, menu, close } from '../assets';
 
 const Navbar = () => {
-  const {active, setActive} = useState('')
+  const [active, setActive] = useState("");
+
+  console.log('Navbar rendering, navLinks:', navLinks);
 
   return (
     <nav
@@ -22,11 +24,26 @@ const Navbar = () => {
             window.scrollTo(0,0);
           }}
         >
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
-          <p className="text-white text-[18px] font-bold cursor-pointer">
+           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+            <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Amanda Goh <span className='sm:block hidden'> | Python </span>
           </p>
         </Link>
+        <ul className='list-none hidden sm:flex 
+          flex-row gap-10'>
+          {navLinks.map((nav) => (
+              <li 
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            
+          ))}
+        </ul>
       </div>
     </nav>
   )
