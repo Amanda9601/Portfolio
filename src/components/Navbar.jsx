@@ -6,12 +6,13 @@ import {logo, menu, close } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
 
   console.log('Navbar rendering, navLinks:', navLinks);
 
   return (
     <nav
-      className={`${styles.paddindX} w-full flex items-center 
+      className={`${styles.paddingX} w-full flex items-center 
       py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center
@@ -26,9 +27,12 @@ const Navbar = () => {
         >
            <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
             <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Amanda Goh <span className='sm:block hidden'> | Python </span>
+            Amanda Goh &nbsp; 
+            <span className='sm:block hidden'>| Python </span>
           </p>
         </Link>
+
+
         <ul className='list-none hidden sm:flex 
           flex-row gap-10'>
           {navLinks.map((nav) => (
@@ -44,6 +48,44 @@ const Navbar = () => {
             
           ))}
         </ul>
+
+
+        <div className='sm:hidden flex flex-1 justify-end items-center'>
+          <img 
+            src={toggle ? close : menu} 
+            alt='menu' 
+            className='w-[28px] h-[28px] 
+            object-contain cursor-pointer'
+            onClick={() => setToggle(!toggle)}>
+          </img>
+
+          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 
+          black-gradient absolute top-20 right-0 mx-4 my-2 
+          min-w-[140px] z-10 rounded-x1`}>
+
+            <ul className='list-none flex sm:flex 
+              justify-end items-start flex-col gap-4'>
+              {navLinks.map((nav) => (
+                  <li 
+                    key={nav.id}
+                    className={`${
+                      active === nav.title ? "text-white" : "text-secondary"
+                    } font-poppins font-medium cursor-pointer text-[16px]`}
+                    onClick={() =>{ 
+                      setActive(nav.title)
+                      setToggle(!toggle) // needed so that when the about link is clicked the menu will close automatically
+                    }}
+                  >
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  </li>
+                
+              ))}
+            </ul>
+
+          </div>
+
+        </div>
+
       </div>
     </nav>
   )
