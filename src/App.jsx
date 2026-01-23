@@ -14,10 +14,14 @@ const App = () => {
         </div>
 
         <About/>
+        {/* Maybe no need skills can include under about
+        the education probably also can */}
         <Skills/>
+        <Education/>
+
+        
         <Projects/>
         <Experience/>
-        <Education/>
         <Certification/>
     
         <div className="relative z-0">

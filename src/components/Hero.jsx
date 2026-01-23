@@ -24,8 +24,10 @@ const Hero = () => {
           </h1>
 
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I studied Bachelor Of Computer Science <br 
-            className='sm:block hidden'/>in Monash. Graduated in May 2025.
+            Computer Science Student. <br 
+            className='sm:block hidden'/> Interested in building
+            reliable software, learning fast, and improving 
+            through real world projects.
           </p>
         </div>
       </div>
