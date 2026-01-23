@@ -117,39 +117,39 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
   // {
-  //   name: "python",
+  //   name: "Python",
   //   icon: python,
   // },
   // {
-  //   name: "java",
+  //   name: "Java",
   //   icon: java,
   // },
   // {
-  //   name: "canva",
+  //   name: "Canva",
   //   icon: canva,
   // },
   // {
-  //   name: "andriod studio",
+  //   name: "Andriod Studio",
   //   icon: andriodStudio,
   // },
   // {
-  //   name: "english",
+  //   name: "English",
   //   icon: english,
   // },
   // {
-  //   name: "chinese",
+  //   name: "Chinese",
   //   icon: chinese,
   // },
 
