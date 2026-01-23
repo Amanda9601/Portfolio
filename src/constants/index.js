@@ -23,6 +23,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  monash,
+  sunway,
 } from "../assets";
 
 export const navLinks = [
@@ -56,6 +58,20 @@ const services = [
   {
     title: "Content Creator",
     icon: creator,
+  },
+];
+
+
+const educations = [
+  {
+    name: "Monash University Malaysia",
+    grad: "Mar 2022 - Jun 2025",
+    icon: monash,
+  },
+  {
+    name: "Sunway College (MUFY, Monash University Foundation Year)",
+    grad: "Jan 2021 - Nov 2021",
+    icon: sunway,
   },
 ];
 
@@ -262,4 +278,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, educations };

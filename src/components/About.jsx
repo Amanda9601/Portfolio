@@ -3,12 +3,14 @@ import {Tilt} from 'react-tilt';
 import {motion} from 'framer-motion';
 
 import {styles} from '../styles';
-import {technologies} from '../constants';
+import {services} from '../constants';
 import {fadeIn, textVariant} from '../utils/motion';
+import {Skills, Education} from '../components';
+import { SectionWrapper } from '../hoc';
 
-const TechCard = ({index, name, icon}) => {
+const ServiceCard = ({index, title, icon}) => {
   return (
-    <p>{name}</p>
+    <p>{title}</p>
   )
 }
 
@@ -16,7 +18,6 @@ const About = () => {
   return (
     <>
       <motion.div>
-        {/* <p className={styles.sectionSubText}>Introduction</p> */}
         <h2 className={styles.sectionHeadText}>Introduction</h2>
       </motion.div>
 
@@ -34,15 +35,25 @@ const About = () => {
         interpersonal skills.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {technologies.map((tech, index) => (
-          <TechCard key={tech.name} 
-          index={index} {...tech}/>
-        ))}
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='my-10 max-w-3xl 
+        leading-[30px]'
+      >
+        <Education/>
+      </motion.p>
 
-      </div>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='my-10 max-w-3xl 
+        leading-[30px]'
+      >
+        <Skills/>
+      </motion.p>
+
+
     </>
   )
 }
 
-export default About
+export default SectionWrapper(About, "about")
