@@ -128,6 +128,31 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+  // {
+  //   name: "python",
+  //   icon: python,
+  // },
+  // {
+  //   name: "java",
+  //   icon: java,
+  // },
+  // {
+  //   name: "canva",
+  //   icon: canva,
+  // },
+  // {
+  //   name: "andriod studio",
+  //   icon: andriodStudio,
+  // },
+  // {
+  //   name: "english",
+  //   icon: english,
+  // },
+  // {
+  //   name: "chinese",
+  //   icon: chinese,
+  // },
+
 ];
 
 const experiences = [
