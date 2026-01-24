@@ -45,7 +45,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='my-10 max-w-3xl 
+        className='my-11 max-w-3xl 
         leading-[30px]'
       >
         <Skills/>
