@@ -6,6 +6,10 @@ import {styles} from '../styles';
 import {technologies} from '../constants';
 import {fadeIn, textVariant} from '../utils/motion';
 
+import {BallCanvas} from "./canvas";
+import {SectionWrapper} from "../hoc";
+
+
 
 const TechCard = ({index, name, icon}) => {
   return (
@@ -16,18 +20,26 @@ const TechCard = ({index, name, icon}) => {
 const Skills = () => {
   return (
     <>
-          <motion.div>
-            <h2 className={styles.sectionSubText}>Skills</h2>
-          </motion.div>
-    
-          <div className='mt-4 flex flex-wrap gap-10'>
-            {technologies.map((tech, index) => (
-              <TechCard key={tech.name} 
-              index={index} {...tech}/>
-            ))}
-          </div>
+      <motion.div>
+        <h2 className={styles.sectionSubText}>Skills</h2>
+      </motion.div>
 
-        </>
+      <div className='mt-4 flex flex-row flex-wrap justify-center 
+      gap-10'>
+
+        {technologies.map((tech, index) => (
+
+          <div className='w-28 h-28' key={tech.name}>
+            {/* <TechCard key={tech.name} 
+            index={index} {...tech}/> */}
+            <BallCanvas icon={tech.icon}/>
+          </div>
+          
+        ))}
+
+      </div>
+
+    </>
   )
 }
 
