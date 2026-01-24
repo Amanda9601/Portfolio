@@ -25,6 +25,13 @@ import {
   threejs,
   monash,
   sunway,
+  andriodStudio,
+  canva,
+  java,
+  python,
+  chinese,
+  english,
+  github,
 } from "../assets";
 
 export const navLinks = [
@@ -77,6 +84,14 @@ const educations = [
 
 const technologies = [
   {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "Java",
+    icon: java,
+  },
+  {
     name: "HTML 5",
     icon: html,
   },
@@ -95,10 +110,6 @@ const technologies = [
   {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
   },
   {
     name: "Tailwind CSS",
@@ -120,25 +131,21 @@ const technologies = [
     name: "Git",
     icon: git,
   },
-  {
-    name: "Figma",
-    icon: figma,
-  },
-  {
-    name: "Docker",
-    icon: docker,
-  },
   // {
-  //   name: "Python",
-  //   icon: python,
+  //   name: "Github",
+  //   icon: github,
   // },
   // {
-  //   name: "Java",
-  //   icon: java,
+  //   name: "Figma",
+  //   icon: figma,
   // },
   // {
   //   name: "Canva",
   //   icon: canva,
+  // },
+  // {
+  //   name: "Docker",
+  //   icon: docker,
   // },
   // {
   //   name: "Andriod Studio",

@@ -54,4 +54,70 @@ const BallCanvas = ({icon}) => {
   )
 }
 
+
+
+
+
+
+
+
+
+
+// const Ball = ({ imgUrl, position }) => {
+//   const [decal] = useTexture([imgUrl]);
+
+//   return (
+//     <Float speed={1.75} rotationIntensity={1}>
+//       <mesh position={position} castShadow receiveShadow 
+//       scale={1}>
+//         <icosahedronGeometry args={[1, 1]} />
+//         <meshStandardMaterial
+//           color="#fff8eb"
+//           polygonOffset
+//           polygonOffsetFactor={-5}
+//           flatShading
+//         />
+//         <Decal
+//           position={[0, 0, 1]}
+//           rotation={[2 * Math.PI, 0, 0.25]}
+//           map={decal}
+//         />
+//       </mesh>
+//     </Float>
+//   );
+// };
+
+
+// const BallCanvas = ({ technologies }) => {
+//   return (
+//     <Canvas
+//       frameloop="demand"
+//       gl={{ preserveDrawingBuffer: true }}
+      
+//     >
+//       <Suspense fallback={<CanvasLoader />}>
+//         {/* Lights ONCE */}
+//         <ambientLight intensity={0.25} />
+//         <directionalLight position={[0, 0, 5]} />
+
+//         <OrbitControls enableZoom={true} />
+
+//         {technologies.map((tech, i) => (
+//           <Ball
+//             key={tech.name}
+//             imgUrl={tech.icon}
+//             position={[
+//               (i % 5) * 3 - 6,   // grid layout
+//               -Math.floor(i / 5) * 3,
+//               0
+//             ]}
+//           />
+//         ))}
+//       </Suspense>
+
+//       <Preload all />
+//     </Canvas>
+//   );
+// };
+
 export default BallCanvas

@@ -8,6 +8,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 import monash from "./monash.png";
 import sunway from "./sunway.png";
+import chinese from "./chinese.png";
+import english from "./english.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -22,6 +24,10 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import andriodStudio from "./tech/andriodStudio.png";
+import canva from "./tech/canva.png";
+import java from "./tech/java.png";
+import python from "./tech/python.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -63,4 +69,10 @@ export {
   tripguide,
   monash,
   sunway,
+  andriodStudio,
+  canva,
+  java,
+  python,
+  chinese,
+  english,
 };

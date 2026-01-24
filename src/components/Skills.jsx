@@ -19,19 +19,15 @@ const TechCard = ({index, name, icon}) => {
 
 const Skills = () => {
   return (
-    <>
-      <motion.div>
-        <h2 className={styles.sectionSubText}>Skills</h2>
-      </motion.div>
-
+   
       <div className='mt-4 flex flex-row flex-wrap justify-center 
       gap-10'>
-
+ 
         {technologies.map((tech, index) => (
 
           <div className='w-28 h-28' key={tech.name}>
-            {/* <TechCard key={tech.name} 
-            index={index} {...tech}/> */}
+            <TechCard key={tech.name} 
+            index={index} {...tech}/>
             <BallCanvas icon={tech.icon}/>
           </div>
           
@@ -39,8 +35,17 @@ const Skills = () => {
 
       </div>
 
-    </>
+   
   )
 }
 
-export default Skills
+
+// const Skills = () => {
+//   return (
+//     <div className="mt-4 h-[600px]">
+//       <BallCanvas technologies={technologies} />
+//     </div>
+//   );
+// };
+
+export default SectionWrapper(Skills, "");

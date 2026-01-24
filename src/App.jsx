@@ -15,6 +15,7 @@ const App = () => {
 
         <About/>
         <Projects/>
+        <Skills/>
         <Experience/>
         <Certification/>
     
