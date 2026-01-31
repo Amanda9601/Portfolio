@@ -238,11 +238,11 @@ const certifications = [
     description:"Certificate of Participation ",
     image:"",
   },
-  // { //2022 I DONT RMB THIS
-  //   name:"Maybank",
-  //   position: "Participant",
-  //   description:"Certificate of Participation ",
-  // },
+  { //2022 I DONT RMB THIS
+    name:"Maybank",
+    position: "Participant",
+    description:"Certificate of Participation ",
+  },
   { //2020
     name:"ACE EdVenture",
     position: "Student",
