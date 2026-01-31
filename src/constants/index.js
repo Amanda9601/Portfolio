@@ -166,18 +166,6 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Publicity, School of Information Technology",
-    company_name: "MUSA SOIT",
-    icon: soit,
-    iconBg: "#E6DEDD",
-    date: "Jan 2024 - Dec 2024",
-    points: [
-      "Spearheaded the design and creation of promotional posters for various events organized by the School of Information Technology.",
-      "Managed the dissemination of promotional material through the official Instagram account, ensuring effective reach and engagement.",
-      "Collaborated with team members to develop visually appealing and informative content to attract a wider audience.",
-    ],
-  },
-  {
     title: "Software Developer Intern",
     company_name: "RMAICT",
     icon: rmaict,
@@ -188,6 +176,18 @@ const experiences = [
       "Improved UI/UX workflows by implementing dynamic validation logic and flexible AND/OR conditional workflows, reducing user errors.",
       "Designed and implemented API integrations and Webhook functionality to fetch, process, and display external data within enterprise systems.",
       "Collaborated with senior developers on system integration, security, and data migration planning, following professional coding standards, Git version control, and QA practices.",
+    ],
+  },
+  {
+    title: "Publicity, School of Information Technology",
+    company_name: "MUSA SOIT",
+    icon: soit,
+    iconBg: "#E6DEDD",
+    date: "Jan 2024 - Dec 2024",
+    points: [
+      "Spearheaded the design and creation of promotional posters for various events organized by the School of Information Technology.",
+      "Managed the dissemination of promotional material through the official Instagram account, ensuring effective reach and engagement.",
+      "Collaborated with team members to develop visually appealing and informative content to attract a wider audience.",
     ],
   },
 ];
@@ -218,6 +218,68 @@ const testimonials = [
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
+
+const certifications = [
+  { //2024
+    name:"SOIT Subcommitee",
+    position: "Publicity",
+    description:"Certificate of Apprecipation",
+    image:"",
+  },
+  { //2023
+    name:"Varsity Hackathon 2023",
+    position: "Participant",
+    description:"Certificate of Participation ",
+    image:"",
+  },
+  { //2023
+    name:"Kitahack Hackathon 2023",
+    position: "Participant",
+    description:"Certificate of Participation ",
+    image:"",
+  },
+  // { //2022 I DONT RMB THIS
+  //   name:"Maybank",
+  //   position: "Participant",
+  //   description:"Certificate of Participation ",
+  // },
+  { //2020
+    name:"ACE EdVenture",
+    position: "Student",
+    description:"Certificate of Completion",
+    image:"",
+  },
+  { //2019
+    name:"AEVDC 2019 Dance Carnival",
+    position: "Pianist",
+    description:"Certificate of Participation",
+    image:"",
+  },
+  { //2018
+    name:"Trinity College London",
+    position: "Student",
+    description:"Graded Examination in Music Performance",
+    image:"",
+  },
+  { //2018
+    name:"AEVDC 2018 Dance Carnival",
+    position: "Dancer",
+    description:"Certicate of Participation",
+    image:"",
+  },
+  { //2015
+    name:"The Associated Board of the Royal Schools of Music",
+    position: "Student",
+    description:"Graded Examination in Grade 1 Music Theory",
+    image:"",
+  },
+  { //2011
+    name:"Royal Academy of Dance",
+    position: "Dancer",
+    description:"Graded Examination in Dance",
+    image:"",
+  },
+]
 
 const projects = [
   {
@@ -285,4 +347,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, educations };
+export { services, technologies, experiences, testimonials, certifications, projects, educations };
