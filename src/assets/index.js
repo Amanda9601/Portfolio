@@ -39,6 +39,7 @@ import soit from "./company/soit.png"
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import search from "./search.png";
 
 import soitCert from "./cert/soit.png";
 import varsityCert from "./cert/varsity.png";
@@ -100,4 +101,5 @@ export {
   danceCert2018,
   pianoCertG1Theory,
   danceCert2011,
+  search,
 };
