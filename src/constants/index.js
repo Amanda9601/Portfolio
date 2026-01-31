@@ -34,6 +34,16 @@ import {
   chinese,
   english,
   github,
+  soitCert,
+  varsityCert,
+  kitahackCert,
+  maybankCert,
+  aceCert,
+  danceCert2019,
+  pianoPerformanceCert,
+  danceCert2018,
+  pianoCertG1Theory,
+  danceCert2011,
 } from "../assets";
 
 export const navLinks = [
@@ -224,60 +234,61 @@ const certifications = [
     name:"SOIT Subcommitee",
     position: "Publicity",
     description:"Certificate of Apprecipation",
-    image:"",
+    image: soitCert,
   },
   { //2023
     name:"Varsity Hackathon 2023",
     position: "Participant",
     description:"Certificate of Participation ",
-    image:"",
+    image: varsityCert,
   },
   { //2023
     name:"Kitahack Hackathon 2023",
     position: "Participant",
     description:"Certificate of Participation ",
-    image:"",
+    image: kitahackCert,
   },
   { //2022 I DONT RMB THIS
     name:"Maybank",
     position: "Participant",
     description:"Certificate of Participation ",
+    image: maybankCert,
   },
   { //2020
     name:"ACE EdVenture",
     position: "Student",
     description:"Certificate of Completion",
-    image:"",
+    image: aceCert,
   },
   { //2019
     name:"AEVDC 2019 Dance Carnival",
     position: "Pianist",
     description:"Certificate of Participation",
-    image:"",
+    image: danceCert2019,
   },
   { //2018
     name:"Trinity College London",
     position: "Student",
     description:"Graded Examination in Music Performance",
-    image:"",
+    image: pianoPerformanceCert,
   },
   { //2018
     name:"AEVDC 2018 Dance Carnival",
     position: "Dancer",
     description:"Certicate of Participation",
-    image:"",
+    image: danceCert2018,
   },
   { //2015
     name:"The Associated Board of the Royal Schools of Music",
     position: "Student",
     description:"Graded Examination in Grade 1 Music Theory",
-    image:"",
+    image: pianoCertG1Theory,
   },
-  { //2011
+  { //2011 Ballet
     name:"Royal Academy of Dance",
     position: "Dancer",
     description:"Graded Examination in Dance",
-    image:"",
+    image: danceCert2011,
   },
 ]
 

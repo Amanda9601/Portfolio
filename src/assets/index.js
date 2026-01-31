@@ -40,6 +40,17 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import soitCert from "./cert/soit.png";
+import varsityCert from "./cert/varsity.png";
+import kitahackCert from "./cert/kitahack.png";
+import maybankCert from "./cert/maybank.jpg";
+import aceCert from "./cert/igcse.png";
+import danceCert2019 from "./cert/2019Dance.png";
+import pianoPerformanceCert from "./cert/g3Performance.png";
+import danceCert2018 from "./cert/2018Dance.png";
+import pianoCertG1Theory from "./cert/g1Theory.png";
+import danceCert2011 from "./cert/primaryBallet.png";
+
 export {
   logo,
   backend,
@@ -79,4 +90,14 @@ export {
   python,
   chinese,
   english,
+  soitCert,
+  varsityCert,
+  kitahackCert,
+  maybankCert,
+  aceCert,
+  danceCert2019,
+  pianoPerformanceCert,
+  danceCert2018,
+  pianoCertG1Theory,
+  danceCert2011,
 };
