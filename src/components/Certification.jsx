@@ -12,6 +12,8 @@ const CertificationCard = ({index, name, position, description,
   return (
     <>
        <motion.div
+        initial="hidden"
+        animate="show"
         variants={fadeIn("", "spring", index*0.5, 0.75)}
         className='bg-black-200 p-10 rounded-3xl xs:w-[320px]
         w-full'
@@ -42,7 +44,7 @@ const CertificationCard = ({index, name, position, description,
             <img
               src={image}
               alt={`${name}`}
-              className='w-20 h-28 object-cover'
+              className='ml-5 w-20 h-28 object-cover'
             />
 
 
@@ -62,7 +64,10 @@ const Certification = () => {
 
       <div className={`${styles.padding} bg-tertiary rounded-2xl 
       min-h-[300px]`}>
-        <motion.div variants={textVariant()}>
+        <motion.div 
+          initial="hidden"
+          animate="show"
+          variants={textVariant()}>
           <h2 className={styles.sectionHeadText}>
             Certifications
           </h2>

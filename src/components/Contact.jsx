@@ -6,6 +6,7 @@ import {styles} from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import { resume } from '../assets'; 
 
 const Contacts = () => {
   const formRef = useRef();
@@ -127,13 +128,31 @@ const Contacts = () => {
             />
           </label>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 outline-none w-fit
-            text-white font-bold shadow-md shadow-primary rounded-xl'
-          >
-            {loading ? "Sending" : "Send"}
-          </button>
+
+          <div className='flex gap-4 mt-4 items-center justify-center'>
+            <button
+              type='submit'
+              className='bg-tertiary py-3 px-8 outline-none w-fit
+              text-white font-bold shadow-md shadow-primary rounded-xl'
+            >
+              {loading ? "Sending" : "Send"}
+            </button>
+
+            <button
+              type='button'
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = resume;
+                link.download = "Amanda_Goh_Resume.pdf";
+                link.click();
+              }}
+              className='bg-tertiary py-3 px-8 outline-none w-fit
+              tet-white font-bold shadow-md shadow-primary rounded-xl'
+            >
+              Download My Resume
+            </button>
+          </div>
+          
 
         </form>
 

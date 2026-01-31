@@ -10,6 +10,7 @@ import monash from "./monash.png";
 import sunway from "./sunway.png";
 import chinese from "./chinese.png";
 import english from "./english.png";
+import resume from "./resume.pdf";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -51,6 +52,7 @@ import pianoPerformanceCert from "./cert/g3Performance.png";
 import danceCert2018 from "./cert/2018Dance.png";
 import pianoCertG1Theory from "./cert/g1Theory.png";
 import danceCert2011 from "./cert/primaryBallet.png";
+
 
 export {
   logo,
@@ -102,4 +104,5 @@ export {
   pianoCertG1Theory,
   danceCert2011,
   search,
+  resume,
 };
