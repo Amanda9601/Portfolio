@@ -26,13 +26,24 @@ const About = () => {
         className='my-4 text-secondary text-[17px] max-w-3xl 
         leading-[30px]'
       >
-        I am a Bachelor of Computer Science graduate from Monash University Malaysia.<br 
-        className='sm:block hidden'/>I am eager to begin my career in the tech industry and 
-        apply my knowledge in real-world projects.<br className='sm:block hidden'/>I work 
-        well both independently and in collaborative team settings, supported
-        by strong communication skills and a high sense of responsibility. I am
-        self-motivated and continuously strive to improve my technical abilities and
-        interpersonal skills.
+        <p>
+          I am an Advanced Computer Science student at Monash University Malaysia with a 
+          strong interest in software development and data analytics.
+        </p>
+        <p className='mt-4'>
+          I am currently 
+          seeking part-time opportunities to gain industry experience and contribute to meaningful 
+          tech projects.
+        </p>
+        <p className='mt-4'>
+          I work 
+          well both independently and in collaborative team settings, supported
+          by strong communication skills and a high sense of responsibility. I am
+          self-motivated and continuously strive to improve my technical abilities and
+          interpersonal skills.
+        </p>
+       
+
       </motion.p>
 
       <motion.p
@@ -42,14 +53,6 @@ const About = () => {
       >
         <Education/>
       </motion.p>
-
-      {/* <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='my-10 max-w-3xl 
-        leading-[30px]'
-      >
-        <Skills/>
-      </motion.p> */}
 
 
     </>
