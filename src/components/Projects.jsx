@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {useRef, useEffect} from 'react';
 import { SectionWrapper } from '../hoc';
 import {motion} from 'framer-motion';
 import {styles} from '../styles';
@@ -14,7 +15,7 @@ const ProjectCard = ({index, name, tags, description, image,
   source_code_link}) => {
 
     return (
-      <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)}>
+      <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)} className='flex-shrink-0'>
         <Tilt
           options={{
             max:45,
@@ -71,6 +72,44 @@ const ProjectCard = ({index, name, tags, description, image,
 };
 
 const Projects = () => {
+  const scrollRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const scroll = (direction) => {
+    if(!scrollRef.current) return;
+
+    const scrollAmount = 200
+    scrollRef.current.scrollBy({
+      left: direction ==="left" ? -scrollAmount : scrollAmount,
+      behavior:"smooth",
+    });
+  };
+
+  useEffect(() => {
+    let frameId;
+
+    const autoScroll = () => {
+
+      console.log("Scroll", scrollRef.current.scrollLeft);
+
+      if (scrollRef.current && !isHovered) {
+        scrollRef.current.scrollLeft += 1;
+      }
+
+      if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
+        scrollRef.current.scrollLeft = 0;
+        console.log("After Reached the end of scroll", scrollRef.current.scrollLeft);
+      }
+
+      frameId = requestAnimationFrame(autoScroll);
+    };
+
+    autoScroll();
+
+    return () => cancelAnimationFrame(frameId);
+  }, [isHovered]);
+
+
   return (
     <>
       <motion.div>
@@ -93,13 +132,42 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project,index)=>(
-          <ProjectCard key={`project-${index}`}
-          index={index}
-          {...project}
-          />
-        ))}
+      <div className='relative mt-10'>
+
+        {/* Left button */}
+        <button 
+        onClick={() => scroll("left")}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className='absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
+        >
+          ◀
+        </button>
+
+        {/* Scroll Container */}
+        <div
+          ref={scrollRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className='flex gap-7 overflow-x-auto pb-4 scroll-smooth no-scrollbar'
+        >
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`}
+            index={index}
+            {...project}
+            />
+          ))}
+        </div>
+
+        {/* Right button */}
+        <button 
+        onClick={() => scroll("right")}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className='absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
+        >
+          ▶
+        </button>
       </div>
 
     </>
