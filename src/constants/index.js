@@ -294,63 +294,70 @@ const certifications = [
 
 const projects = [
   {
-    name: "Rogue-Like Game (School Project)",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    name: "Task Master",
+    description: [
+      "Developed a web-based task management platform that allows teams to create, assign, and track tasks efficiency.",
+      "Led a team of 6 using Scrum methodology, organizing sprint planning, task delegation, and progress reviews.", 
+      "Improved team coordination and workflow transparency through structured Agile practices.",
+    ],
     tags: [
       {
-        name: "react",
+        name: "HTML",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "CSS",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "Javascript",
+        color: "yellow-text-gradient",
       },
       {
-        name: "tailwind",
-        color: "pink-text-gradient",
+        name: "Trello",
+        color: "white-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "red-text-gradient",
       },
     ],
     image: carrent,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Movie Ticket Booking (Haven)",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    name: "Tetris",
+    description: [
+      "Engineered a Tetris game following Functional Reactive Programming (FRP) principles.",
+      "Applied immutability and higher-order functions to improve code clarity and maintainability.",
+      "Utilized reactive programming techniques to manage game state and user interactions efficiently.",
+      "Demonstrated strong understanding of functional programming concepts through structured and scalable design.",
+    ], 
     tags: [
       {
-        name: "react",
+        name: "TypeScript",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "CSS",
+        color: "blue-text-gradient",
       },
     ],
     image: jobit,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Food Order (Haven)",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "The Fiery Dragon",
+    description:[
+      "This was a group project of three members, creating dynamic animal-based gameplay where player identities shift based on tiles.",
+      "Movement is determined by flipping cards; players advance when the card matches their current animal, with steps based on the number of animals.",
+      "Special tiles like Skeleton and Switch introduce backward movement or position swaps, and turns are time-limited for fast-paced play.",
+      "Players can save, resume, reset, or quit at any time; victory is achieved by completing a full round and returning to their cave.",
+    ], 
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "Java",
+        color: "orange-text-gradient",
       },
     ],
     image: tripguide,
