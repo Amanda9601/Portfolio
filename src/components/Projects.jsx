@@ -85,29 +85,31 @@ const Projects = () => {
     });
   };
 
-  useEffect(() => {
-    let frameId;
+  // useEffect(() => {
+  //   let frameId;
 
-    const autoScroll = () => {
+  //   const autoScroll = () => {
 
-      console.log("Scroll", scrollRef.current.scrollLeft);
+  //     console.log("Scroll", scrollRef.current.scrollLeft);
 
-      if (scrollRef.current && !isHovered) {
-        scrollRef.current.scrollLeft += 1;
-      }
+  //     if (!scrollRef.current) return;
 
-      if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
-        scrollRef.current.scrollLeft = 0;
-        console.log("After Reached the end of scroll", scrollRef.current.scrollLeft);
-      }
+  //     if (!isHovered) {
+  //       scrollRef.current.scrollLeft += 1;
+  //     }
 
-      frameId = requestAnimationFrame(autoScroll);
-    };
+  //     if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
+  //       scrollRef.current.scrollLeft = 0;
+  //       console.log("Reset", scrollRef.current.scrollLeft);
+  //     }
 
-    autoScroll();
+  //     frameId = requestAnimationFrame(autoScroll);
+  //   };
 
-    return () => cancelAnimationFrame(frameId);
-  }, [isHovered]);
+  //   autoScroll();
+
+  //   return () => cancelAnimationFrame(frameId);
+  // }, [isHovered]);
 
 
   return (
@@ -149,7 +151,7 @@ const Projects = () => {
           ref={scrollRef}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className='flex gap-7 overflow-x-auto pb-4 scroll-smooth no-scrollbar'
+          className='flex gap-7 overflow-x-auto pb-4 no-scrollbar'
         >
           {projects.map((project, index) => (
             <ProjectCard key={`project-${index}`}
