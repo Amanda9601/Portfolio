@@ -22,7 +22,7 @@ const ProjectCard = ({index, name, tags, description, image, video,
             scale: 1,
             speed:450
           }}
-          className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+          className="bg-tertiary p-5 rounded-2xl sm:w-[560px] w-full"
         >
           <div className='relative w-full h-[230px]'>
 
@@ -98,39 +98,12 @@ const Projects = () => {
   const scroll = (direction) => {
     if(!scrollRef.current) return;
 
-    const scrollAmount = 200
+    const scrollAmount = 300
     scrollRef.current.scrollBy({
       left: direction ==="left" ? -scrollAmount : scrollAmount,
       behavior:"smooth",
     });
   };
-
-  // useEffect(() => {
-  //   let frameId;
-
-  //   const autoScroll = () => {
-
-  //     console.log("Scroll", scrollRef.current.scrollLeft);
-
-  //     if (!scrollRef.current) return;
-
-  //     if (!isHovered) {
-  //       scrollRef.current.scrollLeft += 1;
-  //     }
-
-  //     if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
-  //       scrollRef.current.scrollLeft = 0;
-  //       console.log("Reset", scrollRef.current.scrollLeft);
-  //     }
-
-  //     frameId = requestAnimationFrame(autoScroll);
-  //   };
-
-  //   autoScroll();
-
-  //   return () => cancelAnimationFrame(frameId);
-  // }, [isHovered]);
-
 
   return (
     <>
@@ -197,3 +170,34 @@ const Projects = () => {
 };
 
 export default SectionWrapper(Projects, "project");
+
+
+
+
+
+
+// useEffect(() => {
+  //   let frameId;
+
+  //   const autoScroll = () => {
+
+  //     console.log("Scroll", scrollRef.current.scrollLeft);
+
+  //     if (!scrollRef.current) return;
+
+  //     if (!isHovered) {
+  //       scrollRef.current.scrollLeft += 1;
+  //     }
+
+  //     if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
+  //       scrollRef.current.scrollLeft = 0;
+  //       console.log("Reset", scrollRef.current.scrollLeft);
+  //     }
+
+  //     frameId = requestAnimationFrame(autoScroll);
+  //   };
+
+  //   autoScroll();
+
+  //   return () => cancelAnimationFrame(frameId);
+  // }, [isHovered]);
