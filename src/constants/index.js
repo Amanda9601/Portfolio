@@ -236,7 +236,7 @@ const certifications = [
   { //2024
     name:"SOIT Subcommitee",
     position: "Publicity",
-    description:"Certificate of Apprecipation",
+    description:"Certificate of Appreciation",
     image: soitCert,
   },
   { //2023
@@ -251,12 +251,12 @@ const certifications = [
     description:"Certificate of Participation ",
     image: kitahackCert,
   },
-  { //2022 I DONT RMB THIS
-    name:"Maybank",
-    position: "Participant",
-    description:"Certificate of Participation ",
-    image: maybankCert,
-  },
+  // { //2022 I DONT RMB THIS
+  //   name:"Maybank",
+  //   position: "Participant",
+  //   description:"Certificate of Participation ",
+  //   image: maybankCert,
+  // },
   { //2020
     name:"ACE EdVenture",
     position: "Student",
@@ -265,34 +265,34 @@ const certifications = [
   },
   { //2019
     name:"AEVDC 2019 Dance Carnival",
-    position: "Pianist",
+    position: "Dancer",
     description:"Certificate of Participation",
     image: danceCert2019,
   },
-  { //2018
-    name:"Trinity College London",
-    position: "Student",
-    description:"Graded Examination in Music Performance",
-    image: pianoPerformanceCert,
-  },
+  // { //2018
+  //   name:"Trinity College London",
+  //   position: "Student",
+  //   description:"Graded Examination in Music Performance",
+  //   image: pianoPerformanceCert,
+  // },
   { //2018
     name:"AEVDC 2018 Dance Carnival",
     position: "Dancer",
     description:"Certicate of Participation",
     image: danceCert2018,
   },
-  { //2015
-    name:"The Associated Board of the Royal Schools of Music",
-    position: "Student",
-    description:"Graded Examination in Grade 1 Music Theory",
-    image: pianoCertG1Theory,
-  },
-  { //2011 Ballet
-    name:"Royal Academy of Dance",
-    position: "Dancer",
-    description:"Graded Examination in Dance",
-    image: danceCert2011,
-  },
+  // { //2015
+  //   name:"The Associated Board of the Royal Schools of Music",
+  //   position: "Student",
+  //   description:"Graded Examination in Grade 1 Music Theory",
+  //   image: pianoCertG1Theory,
+  // },
+  // { //2011 Ballet
+  //   name:"Royal Academy of Dance",
+  //   position: "Dancer",
+  //   description:"Graded Examination in Dance",
+  //   image: danceCert2011,
+  // },
 ]
 
 const projects = [
