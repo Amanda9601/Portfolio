@@ -326,7 +326,7 @@ const projects = [
       },
     ],
     video: webTaskManagement,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Amanda9601/Task-Master",
   },
   {
     name: "Tetris",
@@ -347,7 +347,7 @@ const projects = [
       },
     ],
     video: tetris,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Amanda9601/Tetris",
   },
   {
     name: "The Fiery Dragon",
@@ -364,7 +364,7 @@ const projects = [
       },
     ],
     video: theFieryDragon,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Amanda9601/The-Fiery-Dragon",
   },
 ];
 
