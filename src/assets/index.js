@@ -11,6 +11,9 @@ import sunway from "./sunway.png";
 import chinese from "./chinese.png";
 import english from "./english.png";
 import resume from "./resume.pdf";
+import tetris from "./Tetris.mp4";
+import theFieryDragon from "./TheFieryDragon.mp4";
+import webTaskManagement from "./WebTaskManagement.mp4";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -105,4 +108,7 @@ export {
   danceCert2011,
   search,
   resume,
+  tetris,
+  theFieryDragon,
+  webTaskManagement,
 };

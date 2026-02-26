@@ -11,7 +11,7 @@ import {fadeIn, textVariant} from '../utils/motion'
 
 
 
-const ProjectCard = ({index, name, tags, description, image, 
+const ProjectCard = ({index, name, tags, description, image, video,
   source_code_link}) => {
 
     return (
@@ -25,11 +25,25 @@ const ProjectCard = ({index, name, tags, description, image,
           className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
         >
           <div className='relative w-full h-[230px]'>
-            <img
-              src={image}
-              alt={name}
-              className='w-full h-full obejct-center rounded-2xl'
-            />
+
+            {video ? (
+                <video
+                  src={video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className='w-full h-full object center rounded-2xl'
+                />
+              ) : image ? (
+                <img
+                  src={image}
+                  alt={name}
+                  className='w-full h-full obejct-center rounded-2xl'
+                />
+              ) : null
+            }
+
 
             <div className='absolute inset-0 flex justify-end
             m-3 card-img_hover'>

@@ -44,6 +44,9 @@ import {
   danceCert2018,
   pianoCertG1Theory,
   danceCert2011,
+  tetris,
+  theFieryDragon,
+  webTaskManagement,
 } from "../assets";
 
 export const navLinks = [
@@ -322,7 +325,7 @@ const projects = [
         color: "red-text-gradient",
       },
     ],
-    image: carrent,
+    video: webTaskManagement,
     source_code_link: "https://github.com/",
   },
   {
@@ -343,7 +346,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: jobit,
+    video: tetris,
     source_code_link: "https://github.com/",
   },
   {
@@ -360,7 +363,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: tripguide,
+    video: theFieryDragon,
     source_code_link: "https://github.com/",
   },
 ];
