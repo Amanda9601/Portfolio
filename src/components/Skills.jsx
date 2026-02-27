@@ -47,7 +47,7 @@ const SkillCard = ({skill, index}) => {
 const Skills = () => {
   return (
     
-    <div className='flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
+    <div className='flex flex-row justify-around flex-wrap  gap-5 items-center'>
       {technologies.map((skill,index) => (
         <div className='w-28 h-28' key={skill.name}>
           <SkillCard key={skill.name} skill={skill} index={index}/>
