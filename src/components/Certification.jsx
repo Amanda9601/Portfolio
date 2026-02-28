@@ -20,11 +20,6 @@ const CertificationCard = ({index, name, position, description,
         >
 
         <p className='text-white font-black text-[48px]'>" </p>
-        
-        {/* I want to add a search so when hover/click it will
-        show the cert (img), the current one below too small 
-        can't really see. 
-        Can take the project github as an example*/}
 
         <div>
           <p className='text-white tracking-wider
@@ -32,23 +27,27 @@ const CertificationCard = ({index, name, position, description,
           
           <div className='mt-7 flex justify-between items-center
           gap-1'>
+
             <div className='flex-1 flex flex-col'>
+              
               <p className='text-white font-medium text-[17px]'>
                 {name}
               </p>
+
               <p className='mt-1 text-secondary text-[15px]'>
                 {position}
               </p>
+
             </div>
 
-            <img
-              src={image}
-              alt={`${name}`}
-              className='ml-5 w-28 h-32 object-cover'
-            />
-
-
           </div>
+
+          <img
+            src={image}
+            alt={`${name}`}
+            className='mt-5 items-center object-cover'
+          />
+
 
         </div>
         
