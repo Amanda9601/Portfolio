@@ -93,20 +93,26 @@ const ProjectCard = ({index, name, tags, description, image, video,
 const Projects = () => {
   const scrollRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
+
+  const getCardWidth = () => {
+    const card = scrollRef.current.querySelector('.flex-shrink-0');
+    return card ? card.offsetWidth + 40 : 300; // 28 = gap-7 (10 * 4px)
+  }
   
 
   const scroll = (direction) => {
     if(!scrollRef.current) return;
 
-    const card = scrollRef.current.querySelector('.flex-shrink-0');
-    const cardWidth = card ? card.offsetWidth + 40 : 300; // 28 = gap-7 (10 * 4px)
-
     scrollRef.current.scrollBy({
-      left: direction ==="left" ? -cardWidth : cardWidth,
+      left: direction ==="left" ? -getCardWidth() : getCardWidth(),
       behavior:"smooth",
     });
 
     // Reset to start when reaching end
+    resetScroll();
+  };
+
+  const resetScroll = () => {
     const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
 
     if (scrollLeft + clientWidth >= scrollWidth - 5) {
@@ -114,34 +120,24 @@ const Projects = () => {
         left: 0,
         behavior: "smooth",
       });
-    }
-  };
+    } 
+  }
 
   useEffect(() => {
     if (isHovered) return;
-    
-    const card = scrollRef.current.querySelector('.flex-shrink-0');
-    const cardWidth = card ? card.offsetWidth + 40 : 300;
 
     const interval = setInterval(() => {
       if (!scrollRef.current) return;
 
       scrollRef.current.scrollBy({
-        left: cardWidth,
+        left: getCardWidth(),
         behavior: "smooth",
       });
 
       // Reset to start when reaching end
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      resetScroll();
 
-      if (scrollLeft + clientWidth >= scrollWidth - 5) {
-        scrollRef.current.scrollTo({
-          left: 0,
-          behavior: "smooth",
-        });
-      }
-
-    }, 3000); // scroll every 1 seconds
+    }, 3000); // scroll every 3 seconds
 
     return () => clearInterval(interval);
 
@@ -171,6 +167,19 @@ const Projects = () => {
 
       <div className='relative mt-10 overflow-hidden'>
 
+         {/* Left button */}
+        <button 
+        onClick={() => scroll("left")}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={() => setIsHovered(true)}
+        onTouchMove={() => setIsHovered(true)}
+        onTouchEnd={() => setIsHovered(false)}
+        className='absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
+        >
+          ◀
+        </button>
+
         {/* Scroll Container */}
         <div
           ref={scrollRef}
@@ -189,33 +198,19 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className='flex justify-center gap-4 mt-4'>
-          {/* Left button */}
-          <button 
-          onClick={() => scroll("left")}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onTouchStart={() => setIsHovered(true)}
-          onTouchMove={() => setIsHovered(true)}
-          onTouchEnd={() => setIsHovered(false)}
-          className='left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
-          >
-            ◀
-          </button>
-
-          {/* Right button */}
-          <button 
-          onClick={() => scroll("right")}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          onTouchStart={() => setIsHovered(true)}
-          onTouchMove={() => setIsHovered(true)}
-          onTouchEnd={() => setIsHovered(false)}
-          className='right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
-          >
-            ▶
-          </button>
-        </div>
+        {/* Right button */}
+        <button 
+        onClick={() => scroll("right")}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={() => setIsHovered(true)}
+        onTouchMove={() => setIsHovered(true)}
+        onTouchEnd={() => setIsHovered(false)}
+        className='absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
+        >
+          ▶
+        </button>
+        
       </div>
 
     </>
