@@ -51,12 +51,12 @@ import soitCert from "./cert/SOIT.png";
 import varsityCert from "./cert/varsity.png";
 import kitahackCert from "./cert/kitahack.png";
 import maybankCert from "./cert/maybank.jpg";
-import aceCert from "./cert/igcse.png";
+import aceCert from "./cert/IGCSE.png";
 import danceCert2019 from "./cert/2019Dance.png";
-import pianoPerformanceCert from "./cert/g3Performance.png";
+import pianoPerformanceCert from "./cert/G3Performance.png";
 import danceCert2018 from "./cert/2018Dance.png";
-import pianoCertG1Theory from "./cert/g1Theory.png";
-import danceCert2011 from "./cert/primaryBallet.png";
+import pianoCertG1Theory from "./cert/G1Theory.png";
+import danceCert2011 from "./cert/PrimaryBallet.png";
 
 
 export {
