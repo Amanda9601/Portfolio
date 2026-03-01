@@ -14,14 +14,14 @@ const ProjectCard = ({index, name, tags, description, image, video,
   source_code_link}) => {
 
     return (
-      <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)} className='flex-shrink-0'>
+      <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)} className='flex-shrink-0 w-[85vw] sm:w-auto'>
         <Tilt
           options={{
             max:45,
             scale: 1,
             speed:450
           }}
-          className="bg-tertiary p-5 rounded-2xl sm:w-[560px] w-full"
+          className="bg-tertiary p-5 rounded-2xl sm:max-w-[560px] w-full max-w-full"
         >
           <div className='relative w-full h-[230px]'>
 
@@ -93,25 +93,41 @@ const ProjectCard = ({index, name, tags, description, image, video,
 const Projects = () => {
   const scrollRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
+  
 
   const scroll = (direction) => {
     if(!scrollRef.current) return;
 
-    const scrollAmount = 300
+    const card = scrollRef.current.querySelector('.flex-shrink-0');
+    const cardWidth = card ? card.offsetWidth + 40 : 300; // 28 = gap-7 (10 * 4px)
+
     scrollRef.current.scrollBy({
-      left: direction ==="left" ? -scrollAmount : scrollAmount,
+      left: direction ==="left" ? -cardWidth : cardWidth,
       behavior:"smooth",
     });
+
+    // Reset to start when reaching end
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+
+    if (scrollLeft + clientWidth >= scrollWidth - 5) {
+      scrollRef.current.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
     if (isHovered) return;
+    
+    const card = scrollRef.current.querySelector('.flex-shrink-0');
+    const cardWidth = card ? card.offsetWidth + 40 : 300;
 
     const interval = setInterval(() => {
       if (!scrollRef.current) return;
 
       scrollRef.current.scrollBy({
-        left: 300,
+        left: cardWidth,
         behavior: "smooth",
       });
 
@@ -153,23 +169,16 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className='relative mt-10'>
-
-        {/* Left button */}
-        <button 
-        onClick={() => scroll("left")}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className='absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
-        >
-          ◀
-        </button>
+      <div className='relative mt-10 overflow-hidden'>
 
         {/* Scroll Container */}
         <div
           ref={scrollRef}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchMove={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
           className='flex gap-7 overflow-x-auto pb-4 no-scrollbar'
         >
           {projects.map((project, index) => (
@@ -180,15 +189,33 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Right button */}
-        <button 
-        onClick={() => scroll("right")}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className='absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
-        >
-          ▶
-        </button>
+        <div className='flex justify-center gap-4 mt-4'>
+          {/* Left button */}
+          <button 
+          onClick={() => scroll("left")}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchMove={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
+          className='left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
+          >
+            ◀
+          </button>
+
+          {/* Right button */}
+          <button 
+          onClick={() => scroll("right")}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchMove={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
+          className='right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-3 rounded-full'
+          >
+            ▶
+          </button>
+        </div>
       </div>
 
     </>
@@ -199,31 +226,3 @@ export default SectionWrapper(Projects, "project");
 
 
 
-
-
-
-// useEffect(() => {
-  //   let frameId;
-
-  //   const autoScroll = () => {
-
-  //     console.log("Scroll", scrollRef.current.scrollLeft);
-
-  //     if (!scrollRef.current) return;
-
-  //     if (!isHovered) {
-  //       scrollRef.current.scrollLeft += 1;
-  //     }
-
-  //     if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth - scrollRef.current.clientWidth) {
-  //       scrollRef.current.scrollLeft = 0;
-  //       console.log("Reset", scrollRef.current.scrollLeft);
-  //     }
-
-  //     frameId = requestAnimationFrame(autoScroll);
-  //   };
-
-  //   autoScroll();
-
-  //   return () => cancelAnimationFrame(frameId);
-  // }, [isHovered]);

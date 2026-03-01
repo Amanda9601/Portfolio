@@ -9,7 +9,7 @@ import {fadeIn, textVariant} from '../utils/motion';
 const EducationCard = ({index, name, grad, icon}) => {
   return (
 
-    <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)} className='w-full sm:w-auto'>
+    <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)} className='flex-shrink-0 w-full sm:w-auto'>
       <Tilt
         options={{
           max:45,
