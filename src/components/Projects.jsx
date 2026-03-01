@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import {useRef, useEffect} from 'react';
+import {useRef, useEffect, useState} from 'react';
 import { SectionWrapper } from '../hoc';
 import {motion} from 'framer-motion';
 import {styles} from '../styles';
@@ -104,6 +103,33 @@ const Projects = () => {
       behavior:"smooth",
     });
   };
+
+  useEffect(() => {
+    if (isHovered) return;
+
+    const interval = setInterval(() => {
+      if (!scrollRef.current) return;
+
+      scrollRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+
+      // Reset to start when reaching end
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+
+      if (scrollLeft + clientWidth >= scrollWidth - 5) {
+        scrollRef.current.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+      }
+
+    }, 3000); // scroll every 1 seconds
+
+    return () => clearInterval(interval);
+
+  }, [isHovered]);
 
   return (
     <>

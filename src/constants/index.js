@@ -47,7 +47,8 @@ import {
   tetris,
   theFieryDragon,
   webTaskManagement,
-  britishCouncil
+  britishCouncil,
+  notesManagement,
 } from "../assets";
 
 export const navLinks = [
@@ -413,6 +414,31 @@ const projects = [
     ],
     video: theFieryDragon,
     source_code_link: "https://github.com/Amanda9601/The-Fiery-Dragon",
+  },
+  {
+    name: "Note Management",
+    description:[
+      "Developed a Notes Management web application that allows users to add, edit, and delete notes for efficient note organization.",
+      "Implemented CRUD functionality with a clean and user-friendly interface.",
+      "Integrated a dark mode feature to enhance user experience and accessibility.",
+      "",
+    ], 
+    tags: [
+      {
+        name: "HTML",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "yellow-text-gradient",
+      },
+    ],
+    video: notesManagement,
+    source_code_link: "https://github.com/Amanda9601/Notes-management",
   },
 ];
 
