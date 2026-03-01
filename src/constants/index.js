@@ -312,24 +312,24 @@ const certifications = [
     description:"Certificate of Completion",
     image: aceCert,
   },
-  { //2019
-    name:"AEVDC 2019 Dance Carnival",
-    position: "Dancer",
-    description:"Certificate of Participation",
-    image: danceCert2019,
-  },
+  // { //2019
+  //   name:"AEVDC 2019 Dance Carnival",
+  //   position: "Dancer",
+  //   description:"Certificate of Participation",
+  //   image: danceCert2019,
+  // },
   // { //2018
   //   name:"Trinity College London",
   //   position: "Student",
   //   description:"Graded Examination in Music Performance",
   //   image: pianoPerformanceCert,
   // },
-  { //2018
-    name:"AEVDC 2018 Dance Carnival",
-    position: "Dancer",
-    description:"Certicate of Participation",
-    image: danceCert2018,
-  },
+  // { //2018
+  //   name:"AEVDC 2018 Dance Carnival",
+  //   position: "Dancer",
+  //   description:"Certicate of Participation",
+  //   image: danceCert2018,
+  // },
   // { //2015
   //   name:"The Associated Board of the Royal Schools of Music",
   //   position: "Student",
