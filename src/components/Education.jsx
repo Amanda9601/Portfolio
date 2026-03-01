@@ -9,20 +9,20 @@ import {fadeIn, textVariant} from '../utils/motion';
 const EducationCard = ({index, name, grad, icon}) => {
   return (
 
-    <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)} className='flex-shrink-0'>
+    <motion.div variants={fadeIn("up", "spring", index*0.5, 0.75)} className='w-full sm:w-auto'>
       <Tilt
         options={{
           max:45,
           scale: 1,
           speed:450
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:max-w-[360px] w-full max-w-full"
       >
-        <div className='relative w-full'>
+        <div className='relative w-full flex justify-center mb-3'>
           <img
             src={icon}
             alt={name}
-            className='w-30 h-full obejct-center'
+            className='w-[200px] h-full object-contain'
           />
         </div>
 
@@ -44,7 +44,7 @@ const Education = () => {
             <h2 className={styles.sectionSubText}>Education</h2>
           </motion.div>
     
-          <div className='mt-4 flex flex-wrap gap-10'>
+          <div className='mt-4 flex flex-wrap gap-10 w-full overflow-hidden'>
             {educations.map((education, index) => (
               <EducationCard key={education.name} 
               index={index} {...education}/>
