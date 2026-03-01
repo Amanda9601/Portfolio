@@ -47,7 +47,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import search from "./search.png";
 
-import soitCert from "./cert/soit.png";
+import soitCert from "./cert/SOIT.png";
 import varsityCert from "./cert/varsity.png";
 import kitahackCert from "./cert/kitahack.png";
 import maybankCert from "./cert/maybank.jpg";
