@@ -38,7 +38,8 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import rmaict from "./company/rmaict.png";
-import soit from "./company/soit.png"
+import soit from "./company/soit.png";
+import britishCouncil from "./company/britishCouncil.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -111,4 +112,5 @@ export {
   tetris,
   theFieryDragon,
   webTaskManagement,
+  britishCouncil,
 };

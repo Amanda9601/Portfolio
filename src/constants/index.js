@@ -47,6 +47,7 @@ import {
   tetris,
   theFieryDragon,
   webTaskManagement,
+  britishCouncil
 } from "../assets";
 
 export const navLinks = [
@@ -235,6 +236,19 @@ const experiences = [
       "Spearheaded the design and creation of promotional posters for various events organized by the School of Information Technology.",
       "Managed the dissemination of promotional material through the official Instagram account, ensuring effective reach and engagement.",
       "Collaborated with team members to develop visually appealing and informative content to attract a wider audience.",
+    ],
+  },
+  {
+    title: "Invigilator",
+    company_name: "British Council (via AXEVENTS SDN BHD)",
+    icon: britishCouncil,
+    iconBg: "#E6DEDD",
+    date: "Dec 2022",
+    points: [
+      "Served as an invigilator for the British Council Exam, ensuring a fair, structured, and professional examination environment.",
+      "Upheld strict examination protocols and confidentiality standards, including non-disclosure of sensitive information in accordance with company policy.",
+      "Maintained high standards of punctuality, appropriate conduct, and responsiveness to supervisor directives throughout the engagement.",
+      "Collaborated closely with the Event Team (Axevents Sdn Bhd) across a multi-day exam period, demonstrating commitment and reliability in a fast-paced, time-sensitive setting",
     ],
   },
 ];
